@@ -13,4 +13,4 @@ build: ## Build AVD Configs
 
 .PHONY: deploy
 deploy: ## Build AVD Configs
-	ansible-playbook playbooks/deploy_cvaas.yml
+	ansible-playbook playbooks/deploy_cvp.yml
