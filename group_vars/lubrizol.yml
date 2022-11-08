@@ -1,7 +1,7 @@
 ---  
 # Credentials for CVP and EOS Switches
 ansible_user: arista
-ansible_password: aristay1am # Update password with lab credentials
+ansible_password: XXXXXX # Update password with lab credentials
 ansible_network_os: arista.eos.eos
 # Configure privilege escalation
 ansible_become: true
@@ -45,8 +45,8 @@ local_users:
     privilege: 15
     role: network-admin
     # Update sha512_password and ssh_key (leave ssh-rsa in place) from one of your Lab switches
-    sha512_password: "$1$4VjIjfd1$XkUVulbNDESHFzcxDU.Tk1"
-    ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDwhGaTulsXdxHC8GGZRVBAAm2usjzBeJbXErrESFxZUYukFKGecAWiEZDgMtDg4RrtEZczEI31uACmeqR4icRuKhy8bngbceL/9+tpAyYTjbyMZNPdOv+RFAKpGtKJOtvjEmhw0x8YaVRhvN3EqYDh2HKvIRLFb7VCp4jiZHIGVWfis6fSU86cFpG76woWQkpzPo2MEZnG6t7Ka0Fd/QPsHZggKSt790U5pT2vFd4HSanSg89K10z7eVGvkpwAyJjtqx5oCnqxR+iBRz97v1qp1J3yjV9/8PyG21uRQ+R0aS5AthG6sqmZEhHwoXlW+Kd/kw9azHRPDcgKShpHctvn arista@lubrizol-poc-1-54726fc8"
+    sha512_password: "XXXXXX"
+    ssh_key: "ssh-rsa XXXXXXXX"
 
 # OOB Management network default gateway.
 mgmt_gateway: 192.168.0.1

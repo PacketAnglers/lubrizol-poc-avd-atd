@@ -8,7 +8,7 @@ design:
 # Spine Switches
 l3spine:
   defaults:
-    platform: vEOS
+    platform: ceos
     spanning_tree_mode: rstp
     spanning_tree_priority: 4096
     loopback_ipv4_pool: 1.1.1.0/24
@@ -19,17 +19,17 @@ l3spine:
   node_groups:
     SPINES:
       nodes:
-        spine1:
+        s1-spine1:
           id: 1
           mgmt_ip: 192.168.0.10/24
-        spine2:
+        s1-spine2:
           id: 2
           mgmt_ip: 192.168.0.11/24
 
 # IDF - Leaf Switches
 leaf:
   defaults:
-    platform: vEOS
+    platform: ceos
     mlag_peer_ipv4_pool: 192.0.0.0/24
     spanning_tree_mode: rstp
     spanning_tree_priority: 16384
@@ -42,11 +42,11 @@ leaf:
       filter:
         tags: [ 10 ]
       nodes:
-        leaf1:
+        s1-leaf1:
           id: 3
           mgmt_ip: 192.168.0.12/24
           uplink_switch_interfaces: [Ethernet2, Ethernet2]
-        leaf2:
+        s1-leaf2:
           id: 4
           mgmt_ip: 192.168.0.13/24
           uplink_switch_interfaces: [Ethernet3, Ethernet3]
@@ -55,11 +55,11 @@ leaf:
       filter:
         tags: [ 20 ]
       nodes:
-        leaf3:
+        s1-leaf3:
           id: 5
           mgmt_ip: 192.168.0.14/24
           uplink_switch_interfaces: [Ethernet4, Ethernet4]
-        leaf4:
+        s1-leaf4:
           id: 6
           mgmt_ip: 192.168.0.15/24
           uplink_switch_interfaces: [Ethernet5, Ethernet5]
@@ -68,7 +68,7 @@ leaf:
     HOST1:
       mlag: false
       nodes:
-        host1:
+        s1-host1:
           id: 7
           mgmt_ip: 192.168.0.16/24
           uplink_interfaces: [Ethernet1, Ethernet2]
@@ -88,7 +88,7 @@ leaf:
     HOST2:
       mlag: false
       nodes:
-        host2:
+        s1-host2:
           id: 8
           mgmt_ip: 192.168.0.17/24
           uplink_interfaces: [Ethernet1, Ethernet2]
