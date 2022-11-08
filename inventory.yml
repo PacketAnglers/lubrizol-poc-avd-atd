@@ -1,0 +1,32 @@
+---
+lubrizol:
+  children:
+    CVP:
+      hosts:
+        cvp:
+    lbz_fabric:
+      children:
+        lbz_spines:
+          hosts:
+            spine1:
+            spine2:
+        lbz_leafs:
+          hosts:
+            leaf1:
+            leaf2:
+            leaf3:
+            leaf4:
+        lbz_hosts:
+          hosts:
+            host1:
+            host2:
+    lbz_fabric_services:
+      children:
+        lbz_spines:
+        lbz_leafs:
+        lbz_hosts:
+    lbz_fabric_ports:
+      children:
+        lbz_spines:
+        lbz_leafs:
+        lbz_hosts:
