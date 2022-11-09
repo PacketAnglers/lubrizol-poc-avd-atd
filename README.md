@@ -1,6 +1,6 @@
 <img src="images/Lubrizol_Logo.png" width="200"/>
 
-# Lubrizol AVD and CVP POC 
+# AVD and CVP POC 
 
 # Getting AVD going in the ATD programmability IDE
 From your ATD environment, launch the programmability IDE, enter the password, and launch a new terminal:
