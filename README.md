@@ -52,7 +52,7 @@ The ATD Lab switches are preconfigured with MD5 encrypted passwords.  AVD uses s
 From the Programmibility IDE Explorer:
 
 - Navigate to the `labfiles/cleveland-atd-avd/group_vars` folder.
-- Click on the **group_vars/lubrizol.yml** file to open an editor tab.
+- Double click on the **group_vars/lubrizol.yml** file to open an editor tab.
 - Update lines 4, 48, and 49.  **Follow** instructions per line below.
 
 ### Update Line 4
