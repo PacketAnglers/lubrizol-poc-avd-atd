@@ -16,7 +16,7 @@ pip install deepmerge
 
 ## STEP #2 - Clone Necessary Repos
 
-- Change working directory. Following commands will be executed from here.
+- Change working directory. The following commands will be executed from here.
 
 ``` bash
 cd labfiles
