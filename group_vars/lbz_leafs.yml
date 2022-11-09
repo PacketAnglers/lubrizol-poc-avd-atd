@@ -1,2 +1,9 @@
 ---
 type: leaf
+
+# aaa_authentication:
+#   dot1x:
+#     default: < group group_name >
+
+# dot1x:
+#   system_auth_control: < true | false >

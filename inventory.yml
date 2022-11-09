@@ -8,18 +8,18 @@ lubrizol:
       children:
         lbz_spines:
           hosts:
-            s1-spine1:
-            s1-spine2:
+            spine1:
+            spine2:
         lbz_leafs:
           hosts:
-            s1-leaf1:
-            s1-leaf2:
-            s1-leaf3:
-            s1-leaf4:
+            leaf1:
+            leaf2:
+            leaf3:
+            leaf4:
         lbz_hosts:
           hosts:
-            s1-host1:
-            s1-host2:
+            host1:
+            host2:
     lbz_fabric_services:
       children:
         lbz_spines:

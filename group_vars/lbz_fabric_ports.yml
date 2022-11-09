@@ -1,8 +1,8 @@
 ---
 
 port_profiles:
-  PP-DOT1X:
-    mode: "trunk phone"
+  pp-dot1x-trunkphone:
+    mode: < access | trunk | "trunk phone" >
     spanning_tree_portfast: edge
     spanning_tree_bpduguard: enabled
     dot1x:
@@ -24,34 +24,21 @@ network_ports:
 
 # # ---------------- s1-leaf1/2 ----------------
 
-#   - switches:
-#       - s1-leaf[12] # regex match s1-leaf1 & s1-leaF2
-#     switch_ports:
-#       - Ethernet7-48
-#     profile: PP-DOT1X
-#     native_vlan: 10
-#     structured_config:
-#       phone:
-#         trunk: untagged
-#         vlan: 15
-#     dot1x:
-#       authentication_failure:
-#         action: allow
-#         allow_vlan: 999
+# - switches:
+#     - < regex matching the full hostname of one or more switches >
+#   # Switch_ports is a list of ranges using AVD range_expand syntax (see link below).
+#   # Ex Ethernet1-48 or Ethernet2-3/1-48
+#   switch_ports:
+#     - < interface | interface_range >
+#   # Port-profile name, to inherit configuration.
+#   profile: < port_profile_name >
+#   native_vlan: <vlan id>
+#   structured_config:
+#     phone:
+#       trunk: untagged
+#       vlan: <vlan id>
+#   dot1x:
+#     authentication_failure:
+#       action: allow
+#       allow_vlan: 999
 
-# # ---------------- s1-leaf3/4 ----------------
-
-#   - switches:
-#       - s1-leaf[34] # regex match s1-leaf1 & s1-leaF2
-#     switch_ports:
-#       - Ethernet7-48
-#     profile: PP-DOT1X
-#     native_vlan: 20
-#     structured_config:
-#       phone:
-#         trunk: untagged
-#         vlan: 25
-#     dot1x:
-#       authentication_failure:
-#         action: allow
-#         allow_vlan: 999
