@@ -4,7 +4,7 @@ Lubrizol POC with AVD ATD
 # Getting AVD going in the ATD programmability IDE
 From your ATD environment, launch the programmability IDE, enter the password, and launch a new terminal:
 
-<img src="images/programmability_ide.png" alt="Prog IDE" width="400"/>
+<img src="images/programmability_ide.png" alt="Prog IDE"/>
 
 ## STEP #1 - Install deepmerge
 
