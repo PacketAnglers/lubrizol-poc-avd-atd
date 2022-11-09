@@ -1,4 +1,4 @@
-# Lubrizol AVD and CVP POC
+# Lubrizol AVD and CVP POC <img src="images/Lubrizol_Logo.png" width="200"/>
 
 
 # Getting AVD going in the ATD programmability IDE
