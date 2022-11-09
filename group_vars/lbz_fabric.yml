@@ -33,9 +33,9 @@ leaf:
     mlag_peer_ipv4_pool: 192.0.0.0/24
     spanning_tree_mode: mstp
     spanning_tree_priority: 16384
-    # uplink_switches: [spine1, spine2]
-    # uplink_interfaces: [Ethernet2, Ethernet3]
-    # mlag_interfaces: [Ethernet1, Ethernet6]
+    uplink_switches: [spine1, spine2]
+    uplink_interfaces: [Ethernet2, Ethernet3]
+    mlag_interfaces: [Ethernet1, Ethernet6]
   node_groups:
     IDF1:
       mlag: true
@@ -45,24 +45,24 @@ leaf:
         leaf1:
           id: 3
           mgmt_ip: 192.168.0.12/24
-          # uplink_switch_interfaces: [Ethernet2, Ethernet2]
+          uplink_switch_interfaces: [Ethernet2, Ethernet2]
         leaf2:
           id: 4
           mgmt_ip: 192.168.0.13/24
-          # uplink_switch_interfaces: [Ethernet3, Ethernet3]
+          uplink_switch_interfaces: [Ethernet3, Ethernet3]
     IDF2:
       mlag: true
       filter:
-        tags: [ 20 ]
+        tags: [ 10 ]
       nodes:
         leaf3:
           id: 5
           mgmt_ip: 192.168.0.14/24
-          # uplink_switch_interfaces: [Ethernet4, Ethernet4]
+          uplink_switch_interfaces: [Ethernet4, Ethernet4]
         leaf4:
           id: 6
           mgmt_ip: 192.168.0.15/24
-          # uplink_switch_interfaces: [Ethernet5, Ethernet5]
+          uplink_switch_interfaces: [Ethernet5, Ethernet5]
 
 # IDF - Host Switches
     HOST1:
@@ -71,9 +71,9 @@ leaf:
         host1:
           id: 7
           mgmt_ip: 192.168.0.16/24
-          # uplink_interfaces: [Ethernet1, Ethernet2]
-          # uplink_switches: [leaf1, leaf2]
-          # uplink_switch_interfaces: [Ethernet4, Ethernet4]
+          uplink_interfaces: [Ethernet1, Ethernet2]
+          uplink_switches: [leaf1, leaf2]
+          uplink_switch_interfaces: [Ethernet4, Ethernet4]
           structured_config:
             vlan_interfaces:
               Vlan10:
@@ -91,9 +91,9 @@ leaf:
         host2:
           id: 8
           mgmt_ip: 192.168.0.17/24
-          # uplink_interfaces: [Ethernet1, Ethernet2]
-          # uplink_switches: [leaf3, leaf4]
-          # uplink_switch_interfaces: [Ethernet4, Ethernet4]
+          uplink_interfaces: [Ethernet1, Ethernet2]
+          uplink_switches: [leaf3, leaf4]
+          uplink_switch_interfaces: [Ethernet4, Ethernet4]
           structured_config:
             vlan_interfaces:
               Vlan20:

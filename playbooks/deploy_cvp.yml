@@ -1,18 +1,8 @@
 ---
-- name: Build Switch configuration
-  hosts: lbz_fabric
-  tasks:
-    - name: Generate Structured Variables per Device
-      import_role:
-        name: arista.avd.eos_designs
-
-    - name: Generate Intended Config and Documentation
-      import_role:
-        name: arista.avd.eos_cli_config_gen
-
-- name: Deploying Changes via CVaaS
+- name: Deploying Changes via CVP
   hosts: cvp
   connection: local
+  gather_facts: false
   tasks:
     - name: run CVP provisioning
       import_role:
@@ -21,5 +11,4 @@
         container_root: 'lbz_fabric'
         configlets_prefix: 'AVD'
         state: present
-        # cv_collection: v3
-        execute_tasks: false
+        execute_tasks: true
