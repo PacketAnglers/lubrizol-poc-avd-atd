@@ -51,21 +51,21 @@ The ATD Lab switches are preconfigured with MD5 encrypted passwords.  AVD uses s
 From the Programmibility IDE Explorer:
 
 - Navigate to the `labfiles/cleveland-atd-avd/group_vars` folder.
-- Click on the **group_vars/ATD.yml** file to open an editor tab.
-- Update lines 5, 49, and 50.  **Follow** instructions per line below.
+- Click on the **group_vars/lubrizol.yml** file to open an editor tab.
+- Update lines 4, 48, and 49.  **Follow** instructions per line below.
 
-### Update Line 5
+### Update Line 4
 
-- Update `ansible_password` key (line 5) with your unique lab password found on the **Usernames and Passwords** section of your lab topology screen.
+- Update `ansible_password` key (line 4) with your unique lab password found on the **Usernames and Passwords** section of your lab topology screen.
 
 ``` yaml
-# group_vars/ATD.yml
+# group_vars/lubrizol.yml
 #
-# switch credentials
+# Credentials for CVP and EOS Switches
 ansible_password: XXXXXXXXXXX
 ```
 
-### Update Lines 49 & 50
+### Update Lines 48 & 49
 
 - First, convert the current `arista` username type 5 password to a sha512 by running the following commands on one of your switches. Substitute XXXXXXX with your Lab's unique password.
 
@@ -88,7 +88,7 @@ show run section username | grep arista
 Your file should look similar to below.  Use values your show command output above, as they are unique to your switches.
 
 ``` yaml
-# group_vars/ATD.yml
+# group_vars/lubrizol.yml
 #
 # local users to be configured on switch
 local_users:
@@ -96,3 +96,5 @@ local_users:
     sha512_password: "XXXXXXXXXXXXXX"
     ssh_key: "ssh-rsa XXXXXXXXXXXXXXXXXXX"
 ```
+
+## Now You're Ready To Rock
