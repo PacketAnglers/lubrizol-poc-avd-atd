@@ -37,7 +37,11 @@ git clone https://github.com/aristanetworks/ansible-cvp.git
 git clone https://github.com/PacketAnglers/lubrizol-poc-avd-atd.git
 ```
 
-## STEP #4 - Update Passwords and SSH Keys
+At this point you should see the 3 new directories under the labfiles directory:
+
+<img src="images/labfiles.png" alt="Labfiles Dir" width="400"/>
+
+## STEP #3 - Update Passwords and SSH Keys
 
 The ATD Lab switches are preconfigured with MD5 encrypted passwords.  AVD uses sha512 passwords so we need to convert the current MD5 password to sha512.  **You will need to login to a switch to do this step.**
 
