@@ -35,9 +35,7 @@ ansible-galaxy collection install git+https://github.com/aristanetworks/ansible-
 git clone https://github.com/PacketAnglers/lubrizol-poc-avd-atd.git
 ```
 
-At this point you should see the 3 new directories under the labfiles directory:
-
-<img src="images/labfiles.png" alt="Labfiles Dir" width="400"/>
+- At this point you should see the Lubrizol POC folder under the labfiles directory.
 
 ## STEP #3 - Update Passwords and SSH Keys
 
