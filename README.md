@@ -90,4 +90,9 @@ local_users:
     ssh_key: "ssh-rsa XXXXXXXXXXXXXXXXXXX"
 ```
 
+## Change directory to the actual repo
+``` bash
+cd lubrizol-poc-avd-atd
+```
+
 ## Now You're Ready To Rock
