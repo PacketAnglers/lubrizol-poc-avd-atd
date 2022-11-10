@@ -23,16 +23,10 @@ pip install deepmerge
 cd labfiles
 ```
 
-- Clone the Ansible AVD Repo
+- Install the AVD devel collection
 
 ``` bash
-git clone https://github.com/aristanetworks/ansible-avd.git
-```
-
-- Clone the Ansible CVP Repo
-
-``` bash
-git clone https://github.com/aristanetworks/ansible-cvp.git
+ansible-galaxy collection install git+https://github.com/aristanetworks/ansible-avd.git#/ansible_collections/arista/avd/,devel
 ```
 
 - Clone the POC Repo
